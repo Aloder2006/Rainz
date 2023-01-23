@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: 0px 0px 15px rgb(0 0 0 / 55%);
+}
+
+:root {
+  --themeColor1: #eee;
+  --themeColor2: rgba(31, 31, 31, 0.6);
+}
+
+html {
+  font-size: 15px;
+  color: var(--themeColor1);
+}
+
+.hr {
+  width: 100%;
+  margin: 10px auto;
+  opacity: 0.7;
+  border-bottom: 0.5px solid silver;
+  height: 0.5px;
+}
+
+::selection{
+  background-color: var(--themeColor2);
+  color: var(--themeColor1);
+}
+
+main {
+  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-image: url("https://picsum.photos/3000/1500.jpg?blur=2&grayscale");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-section {
+  background-color: var(--themeColor2);
+  width: 80%;
+  border-radius: 1rem;
+  padding: 2.3rem 1.2rem;
+  overflow: hidden;
+}
+
+.main-block {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.main-block .toggle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-block .toggle-btn button {
+  height: 130px;
+  width: 130px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+  background-color: transparent;
+}
+
+.play {
+  background: url("../images/i/play.png");
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  cursor: pointer;
+}
+
+.pause {
+  background: url("../images/i/pause.png");
+  border-radius: 50%;
+  animation: animate 5s linear 1;
+  cursor: pointer;
+}
+
+
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.15);
+  }
+
+  40% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+  }
+
+  80% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.sounds {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.sounds .header {
+  text-align: center;
+  padding: 0.7rem 0;
+  color: var(--themeColor1);
+}
+
+.sounds .header h1 {
+  font-size: 3.5rem;
+}
+
+.sounds .header p {
+  font-size: 1.5rem;
+}
+
+.sounds-control{
+  margin: 0 2.2rem;
+}
+
+.sounds .sounds-control p{
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.sounds .sounds-control .sounds-sourse{
+  display: flex;
+  margin-bottom: 2rem;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  row-gap: 6rem;
+  column-gap: 1.2rem;
+}
+
+
+
+
+.sounds .sounds-control .sounds-sourse .sound-box{
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.sounds .sounds-control .sounds-sourse .sound-box .s-info{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 100%;
+  margin: 6.05px 0;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2.9px;
+  cursor: pointer;
+  background: var(--themeColor1);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: var(--themeColor1);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.05px;
+}
+
+.main-block .visits{
+  text-align: center;
+  font-size: 1rem;
+ }
+
+
+@media only screen and (max-width: 1250px){
+  main{
+    height: auto;
+    padding: 4rem 0;
+    background-image: url("https://picsum.photos/1733/1733.jpg?blur=2&grayscale");
+  }
+
+}
+
+@media only screen and (max-width: 650px)
+{
+ main{
+  background-image: url("https://picsum.photos/820/1733.jpg?blur=2&grayscale");
+ }
+ .main-block .visits{
+  font-size: .8rem;
+ }
+}
+
+@media only screen and (max-width: 550px){
+  
+  .main-section{
+    width: 90%;
+  }
+  .sounds .sounds-control .sounds-sourse .sound-box img{
+    width: 7rem;
+  }
+}
+
+.typewrite > .wrap {
+  border-right: 0.08em solid #fff;
+  animation: caret 1s steps(1) infinite;
+}
+
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
