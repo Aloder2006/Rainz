@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainz</title>
+
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="main-section">
+            <div class="main-block">
+                <div class="toggle-btn">
+                    <button class="play">
+                    </button>
+                </div>
+                <div class="sounds">
+                    <div class="header">
+                        <h1>Rainz</h1>
+                        <p>Relax Sounds for <span class="typewrite" data-period="2000"
+                                data-type="[ &quot;Sleep&quot;, &quot;Study&quot; ]">
+                                <span class="wrap">Relax</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="sounds-control">
+                        <div class="hr"></div>
+                        <p>you can mix these sounds</p>
+                        <div class="sounds-sourse">
+                            <div class="sound-box">
+                                <img src="./static/images/rain.png" >
+                                <div class="s-info">
+                                    <h3>Rain</h3>
+                                    <input type="range" id="rain-vol" min="0" max="1" step="0.01" value="0.5">
+                                    <div>
+                                        <audio data-start-vol="0.5" id="rain" preload="auto" loop="loop">
+                                            <source src="./static/sounds/main-rain.mp4" type="audio/mp4">
+                                            <source src="./static/sounds/main-rain.ogg" type="audio/ogg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sound-box">
+                                <img src="./static/images/lightning.png">
+                                <div class="s-info">
+                                    <h3>Lightning</h3>
+                                    <input type="range" id="lightning-vol" min="0" max="1" step="0.01" value="0">
+                                    <div>
+                                        <audio data-start-vol="0" id="lightning" preload="auto" loop="loop" >
+                                            <source src="./static/sounds/main-thunder.mp4" type="audio/mp4">
+                                            <source src="./static/sounds/main-thunder.ogg" type="audio/ogg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sound-box">
+                                <img src="./static/images/waves.png">
+                                <div class="s-info">
+                                    <h3>Waves</h3>
+                                    <input type="range" id="waves-vol" min="0" max="1" step="0.01" value="0">
+                                    <div>
+                                        <audio data-start-vol="0" id="waves" preload="auto" loop="loop">
+                                            <source src="./static/sounds/main-waves.mp4" type="audio/mp4">
+                                            <source src="./static/sounds/main-waves.ogg" type="audio/ogg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sound-box">
+                                <img src="./static/images/fire.png">
+                                <div class="s-info">
+                                    <h3>Fire</h3>
+                                    <input type="range" id="fire-vol" min="0" max="1" step="0.01" value="0">
+                                    <div>
+                                        <audio data-start-vol="0" id="fire" preload="auto" loop="loop">
+                                            <source src="./static/sounds/main-fire.mp4" type="audio/mp4">
+                                            <source src="./static/sounds/main-fire.mp4" type="audio/ogg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sound-box">
+                                <img src="./static/images/coffee.png">
+                                <div class="s-info">
+                                    <h3>Coffee</h3>
+                                    <input type="range" id="coffee-vol" min="0" max="1" step="0.01" value="0">
+                                    <div>
+                                        <audio data-start-vol="0" id="coffee" preload="auto" loop="loop">
+                                            <source src="./static/sounds/main-people.mp4" type="audio/mp4">
+                                            <source src="./static/sounds/main-people.ogg" type="audio/ogg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr"></div>
+                    </div>
+                </div>
+                <h1 class="visits">number of visitors <span>0</span>.</h1>
+            </div>
+        </section>
+    </main>
+    <script src="./static/javascript/script.js"></script>
+
+</body>
+
+</html>
