@@ -107,5 +107,5 @@ window.onload = function () {
 
 
 function websiteVisits(response) {
-    document.querySelector("#visits").textContent = response.value;
+    document.querySelector(".visits span").textContent = response.value;
 }
