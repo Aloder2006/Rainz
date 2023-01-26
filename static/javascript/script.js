@@ -9,7 +9,7 @@ let inputVol = document.querySelectorAll("input");
 sounds.forEach((s) => {
   s.volume = s.dataset.startVol;
   inputVol.forEach((ipt) => {
-    ipt.addEventListener("change", () => {
+    ipt.addEventListener("input", () => {
       if (ipt.id === "rain-vol" && s.id === "rain") {
         s.volume = ipt.value;
       } else if (ipt.id === "lightning-vol" && s.id === "lightning") {
